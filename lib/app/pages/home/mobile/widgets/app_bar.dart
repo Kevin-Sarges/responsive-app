@@ -7,7 +7,13 @@ class HomeAppBarMobile extends StatelessWidget {
   Widget build(BuildContext context) {
     return AppBar(
       backgroundColor: Colors.black,
-      title: const Text('AppBar Mobile'),
+      title: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: const [
+          FlutterLogo(),
+          Text('Flutter'),
+        ],
+      ),
       actions: [
         IconButton(
           icon: const Icon(Icons.search),
