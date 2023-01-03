@@ -1,5 +1,6 @@
 import 'package:app_responsivo/app/pages/home/mobile/widgets/app_bar.dart';
 import 'package:app_responsivo/app/pages/home/web/widgets/app_bar.dart';
+import 'package:app_responsivo/app/pages/home/sections/top_sections.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -10,6 +11,7 @@ class HomePage extends StatelessWidget {
     return LayoutBuilder(
       builder: (BuildContext context, BoxConstraints constraints) {
         return Scaffold(
+          backgroundColor: const Color(0xFF181818),
           appBar: constraints.maxWidth < 800
               ? const PreferredSize(
                   preferredSize: Size(
@@ -26,6 +28,19 @@ class HomePage extends StatelessWidget {
                   child: HomeAppBarWeb(),
                 ),
           drawer: constraints.maxWidth > 800 ? null : const Drawer(),
+          body: Align(
+            alignment: Alignment.topCenter,
+            child: ConstrainedBox(
+              constraints: const BoxConstraints(
+                maxWidth: 1300,
+              ),
+              child: ListView(
+                children: const [
+                  TopSection(),
+                ],
+              ),
+            ),
+          ),
         );
       },
     );
