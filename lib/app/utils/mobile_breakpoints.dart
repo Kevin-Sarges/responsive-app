@@ -1,3 +1,4 @@
-class MobileBreakPoints {
-  static const breakpoints = 700;
+class BreakPoints {
+  static const moblieBreakpoint = 700;
+  static const tabletBreakpoint = 1200;
 }

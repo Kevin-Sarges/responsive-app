@@ -13,11 +13,11 @@ class TopSection extends StatelessWidget {
       builder: (context, constraints) {
         final maxWidhtContainer = constraints.maxWidth;
 
-        if (maxWidhtContainer >= 1200) {
+        if (maxWidhtContainer >= BreakPoints.tabletBreakpoint) {
           return const TopSectionWeb();
         }
 
-        if (maxWidhtContainer >= MobileBreakPoints.breakpoints) {
+        if (maxWidhtContainer >= BreakPoints.moblieBreakpoint) {
           return const TopSectionTablet();
         }
 
